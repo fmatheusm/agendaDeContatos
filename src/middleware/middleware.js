@@ -1,13 +1,16 @@
 exports.middlewareGlobal = (req, res, next) => {
-    res.locals.variavelMiddlewareQueVaiParaTodasAsRotas = 'Va riavel do middleware';
+    res.locals.errors = req.flash('errors');
+    res.locals.success = req.flash('success');
+    res.locals.user = req.session.user;
     next();
 };
 
 exports.checkCsurfError = (err, req, res, next) => {
     console.log(err, err.code);
-    if (err && 'EBADCSRFTOKEN' === err.code) {
+    if (err) {
         return res.render('404');
     }
+    next();
 };
 
 exports.csrfMiddleware = (req, res, next) => {
