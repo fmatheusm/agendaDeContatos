@@ -41,7 +41,6 @@ exports.edit = async function (req, res) {
 
         if (contato.errors.length > 0) {
             req.flash('errors', contato.errors);
-            console.log(contato)
             req.session.save(() => res.redirect(`/contato/index/${req.params.id}`));
             return;
         }
