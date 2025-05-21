@@ -14,22 +14,26 @@
                 value="<%= csrfToken %>" />
             <div class="mb-3">
                 <label class="form-label">Nome</label>
-                <input type="text" class="form-control" id="exampleInputEmail1"
-                    name="nome" aria-describedby="namelHelp" />
+                <input value="<%= contato.nome %>" type="text"
+                    class="form-control" id="exampleInputEmail1" name="nome"
+                    aria-describedby="namelHelp" />
             </div>
             <div class="mb-3">
                 <label class="form-label">Sobrenome</label>
-                <input type="text" class="form-control" id="exampleInputEmail1"
+                <input value="<%= contato.sobrenome %>"
+                    type="text" class="form-control" id="exampleInputEmail1"
                     name="sobrenome" aria-describedby="lastNamelHelp" />
             </div>
             <div class="mb-3">
                 <label class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="exampleInputEmail1"
-                    name="email" aria-describedby="emailHelp" />
+                <input value="<%= contato.email %>" type="email"
+                    class="form-control" id="exampleInputEmail1" name="email"
+                    aria-describedby="emailHelp" />
             </div>
             <div class="mb-3">
                 <label class="form-label">Telefone</label>
-                <input type="tel" class="form-control" id="exampleInputEmail1"
+                <input value="<%= contato.telefone %>"
+                    type="tel" class="form-control" id="exampleInputEmail1"
                     name="telefone" aria-describedby="tellHelp" />
             </div>
 
